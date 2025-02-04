@@ -26,7 +26,7 @@ class Perceptron:
 
     def fit(self, X, y):
         for ep in range(self.epochs):
-            for i in range(X.shape[0]):
+            for i in tqdm(range(X.shape[0])):
                 y_pred = self.predict(X[i])
                 loss = (y[i] - y_pred)/2
                 X_i = np.insert(X[i], 0, 1.0)
