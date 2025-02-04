@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 from sklearn.model_selection import train_test_split
-from tqdm import tqdm  # Added later for debugging
 
 class Perceptron:
     def __init__(self, input_size, learning_rate=0.01, epochs=1000):
@@ -12,7 +11,7 @@ class Perceptron:
         self.epochs = epochs
 
     def activation(self, x):
-        return 1 if x > 0 else -1
+        return 1.0 if x > 0 else -1.0
 
     def predict(self, X):
         if X.ndim == 1:
