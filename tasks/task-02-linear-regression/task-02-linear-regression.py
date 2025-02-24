@@ -60,7 +60,7 @@ def solve_linear_regression(X_train, y_train):
 
     b_hat, m_hat = w_reg
 
-    return m_hat, b_hat  # Return slope and intercept
+    return m_hat[0], b_hat[0]  # Return slope and intercept
 
 
 # Example use case (to be replaced by your script
